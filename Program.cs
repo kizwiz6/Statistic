@@ -6,12 +6,20 @@
         {
             double[] numbers = {1, 5, 4.25};
 
-            double sum = CalculateSum(numbers);
-            double min = CalculateMin(numbers);
-            double max = CalculateMax(numbers);
-            double average = CalculateAverage(numbers);
+            try
+            {
+                double sum = CalculateSum(numbers);
+                double min = CalculateMin(numbers);
+                double max = CalculateMax(numbers);
+                double average = CalculateAverage(numbers);
+                PrintStatistics(sum, min, max, average);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occured: {ex.Message}");
+                throw;
+            }
 
-            PrintStatistics(sum, min, max, average);
         }
 
         static double CalculateSum(double[] numbers)
