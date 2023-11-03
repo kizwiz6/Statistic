@@ -52,7 +52,7 @@
 
         static double CalculateAverage(double[] numbers)
         {
-            if (numbers.Length == 0)
+            if (numbers == null || numbers.Length == 0)
             {
                 return 0;
             }
