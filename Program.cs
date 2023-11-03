@@ -23,7 +23,7 @@
                 }
                 if (max < value)
                 {
-                    min = value;
+                    max = value;
                 }
             }
 
