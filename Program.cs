@@ -6,30 +6,59 @@
         {
             double[] numbers = {1, 5, 4.25};
 
-            double min = numbers[0];
-            double max = numbers[1];
+            double sum = CalculateSum(numbers);
+            double min = CalculateMin(numbers);
+            double max = CalculateMax(numbers);
+            double average = CalculateAverage(numbers);
+
+            PrintStatistics(sum, min, max, average);
+        }
+
+        static double CalculateSum(double[] numbers)
+        {
             double sum = 0;
-
-            int count = numbers.Length;
-
-            for (int i = 0; i < count; i++)
+            foreach (double value in numbers)
             {
-                double value = numbers[i];
                 sum += value;
+            }
+            return sum;
+        }
 
-                if (min > value)
+        static double CalculateMin(double[] numbers)
+        {
+            double min = numbers[0];
+            foreach (double value in numbers)
+            {
+                if (value < min)
                 {
                     min = value;
                 }
-                if (max < value)
+            }
+            return min;
+        }
+
+        static double CalculateMax(double[] numbers)
+        {
+            double max = numbers[0];
+            foreach (double value in numbers)
+            {
+                if (value > max)
                 {
                     max = value;
                 }
             }
+            return max;
+        }
 
-            double average = sum / count;
+        static double CalculateAverage(double[] numbers)
+        {
+            if (numbers.Length == 0)
+            {
+                return 0;
+            }
 
-            PrintStatistics(sum, min, max, average);
+            double sum = CalculateSum(numbers);
+            return sum / numbers.Length;
         }
 
         static void PrintStatistics(double sum, double min, double max, double average)
