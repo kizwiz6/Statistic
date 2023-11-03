@@ -1,0 +1,6 @@
+﻿Write a program which prints the following data for array:
+- Sum - the toal sum of all array elements.
+- Minimum - the minimum value in array.
+- Maximum - the maximum value in array.
+- Average - the average of all array values.
+Average needs to be rounded to 2 decimals.
