@@ -29,10 +29,10 @@
 
             double average = sum / count;
 
-            Console.WriteLine("Sum: " + sum);
-            Console.WriteLine("Min: " + min);
-            Console.WriteLine("Max: " + max);
-            Console.WriteLine("Average: " + Math.Round(average, 2));
+            Console.WriteLine($"Sum: {sum}");
+            Console.WriteLine($"Min: {min}");
+            Console.WriteLine($"Max: {max}");
+            Console.WriteLine($"Average: {Math.Round(average, 2)}");
         }
     }
 }
