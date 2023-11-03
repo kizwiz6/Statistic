@@ -29,6 +29,11 @@
 
             double average = sum / count;
 
+            PrintStatistics(sum, min, max, average);
+        }
+
+        static void PrintStatistics(double sum, double min, double max, double average)
+        {
             Console.WriteLine($"Sum: {sum}");
             Console.WriteLine($"Min: {min}");
             Console.WriteLine($"Max: {max}");
