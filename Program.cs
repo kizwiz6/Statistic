@@ -1,8 +1,8 @@
 ﻿namespace Statistic
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             double[] numbers = {1, 5, 4.25};
 
@@ -19,10 +19,9 @@
                 Console.WriteLine($"An error occured: {ex.Message}");
                 throw;
             }
-
         }
 
-        static double CalculateSum(double[] numbers)
+        public static double CalculateSum(double[] numbers)
         {
             double sum = 0;
             foreach (double value in numbers)
@@ -32,7 +31,7 @@
             return sum;
         }
 
-        static double CalculateMin(double[] numbers)
+        public static double CalculateMin(double[] numbers)
         {
             double min = numbers[0];
             foreach (double value in numbers)
@@ -45,7 +44,7 @@
             return min;
         }
 
-        static double CalculateMax(double[] numbers)
+        public static double CalculateMax(double[] numbers)
         {
             double max = numbers[0];
             foreach (double value in numbers)
@@ -58,7 +57,7 @@
             return max;
         }
 
-        static double CalculateAverage(double[] numbers)
+        public static double CalculateAverage(double[] numbers)
         {
             if (numbers == null || numbers.Length == 0)
             {
@@ -69,7 +68,7 @@
             return sum / numbers.Length;
         }
 
-        static void PrintStatistics(double sum, double min, double max, double average)
+        public static void PrintStatistics(double sum, double min, double max, double average)
         {
             Console.WriteLine($"Sum: {sum}");
             Console.WriteLine($"Min: {min}");
